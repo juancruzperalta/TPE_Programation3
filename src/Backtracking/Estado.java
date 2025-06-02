@@ -6,6 +6,7 @@ public class Estado {
 	List<Maquina> maquinasActuales;
 	int piezasUsadasActuales;
 	Maquina maquinaActual;
+	int puestaEnMarcha;
 	public Estado(List<Maquina> maquinasActuales, int piezasUsadasActuales, Maquina maquinaActual) {
 		super();
 		this.maquinasActuales = maquinasActuales;
@@ -39,12 +40,17 @@ public class Estado {
 	public void quitarUso() {
 		this.maquinasActuales.remove(this.maquinasActuales.size()-1);
 	}
-	public void piezaUsadaMas(int cantPiezasPorProducir) {
+	public void sumarCantPiezas(int cantPiezasPorProducir) {
 		this.piezasUsadasActuales+=cantPiezasPorProducir;
 	}
-	public void piezaUsadaMenos(int cantPiezasPorProducir) {
+	public void restarCantPiezas(int cantPiezasPorProducir) {
 		this.piezasUsadasActuales-=cantPiezasPorProducir;
 	}
-	
+	public void puestaEnMarcha() {
+		this.puestaEnMarcha++;
+	}
+	public void quitarPuestaEnMarcha() {
+		this.puestaEnMarcha--;
+	}
 	
 }

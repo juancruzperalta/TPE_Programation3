@@ -25,7 +25,7 @@ public class Maquina {
 	}
 	@Override
 	public String toString() {
-		return "Maquina [" + nombreMaquina + " - " + cantPiezasPorProducir + "]";
+		return "[" + nombreMaquina + " - " + cantPiezasPorProducir + "]";
 	}
 	
 	
