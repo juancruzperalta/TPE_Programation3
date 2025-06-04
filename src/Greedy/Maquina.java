@@ -29,7 +29,7 @@ public class Maquina implements Comparable<Maquina> {
 	}
 	@Override
 	public int compareTo(Maquina o) {
-		return Integer.compare(cantPiezasPorProducir, o.cantPiezasPorProducir);
+	    return Integer.compare(o.cantPiezasPorProducir, this.cantPiezasPorProducir);
 	}
 	
 	

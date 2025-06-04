@@ -26,8 +26,12 @@ public class Main {
         
         
         Backtracking back = new Backtracking(maquinas, valorObjetivo);
-        back.backTracking();
-        back.imprimirSolucion();
+        Solucion sol = back.backTracking();
+        if(sol!=null) {
+        	back.imprimirSolucion();
+        }else {
+        	System.out.println("No hay solución");
+        }
 
     }
 }

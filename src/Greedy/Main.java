@@ -9,7 +9,7 @@ public class Main {
         String objetivo = "";
         int valorObjetivo=0;
         try {
-        BufferedReader br = new BufferedReader(new FileReader("src/Backtracking/iniciales.txt"));
+        BufferedReader br = new BufferedReader(new FileReader("src/Greedy/inicialGreedy.txt"));
                 objetivo = br.readLine().trim();
                 valorObjetivo = Integer.parseInt(objetivo);
              String linea;
@@ -26,8 +26,12 @@ public class Main {
         }
 
         Greedy eje = new Greedy(maquinas, valorObjetivo);
-        eje.greedy();
-        eje.imprimirSolucion();
+        Solucion sol = eje.greedy();
+        if(sol!=null) {
+        	eje.imprimirSolucion();
+        }else {
+        	System.out.println("GREEDY: -> No hemos llegado a una solución posible.");
+        }
         
     }
 }

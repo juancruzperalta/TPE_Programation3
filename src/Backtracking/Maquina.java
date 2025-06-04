@@ -1,8 +1,5 @@
 package Backtracking;
-/* Enunciado: cada máquina produce un número establecido de piezas 
-  una vez que se pone en funcionamiento
- -Es por eso que una máquina tendrá (su nombre) para identificarla, y una cantidad
- -de piezas por producir (Ejemplo: Nombre: M1, cantPiezas: 7)*/
+
 public class Maquina {
 	String nombreMaquina;
 	int cantPiezasPorProducir;
