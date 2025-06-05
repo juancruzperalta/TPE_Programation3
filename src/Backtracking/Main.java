@@ -21,7 +21,7 @@ public class Main {
                     }
                 }
         }catch(Exception err) {
-        	System.out.println(err);
+        	System.out.println("Error:No hay datos");
         }
         
         

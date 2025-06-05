@@ -22,12 +22,13 @@ public class Main {
                     }
                 }
         }catch(Exception err) {
-        	System.out.println(err);
+        	System.out.println("Error, no hay datos");
         }
 
         Greedy eje = new Greedy(maquinas, valorObjetivo);
         Solucion sol = eje.greedy();
-        if(sol!=null) {
+        //También verifico que se imprima sólo si el valorObjetivo es mayor a un numero razonable
+        if(sol!=null && valorObjetivo > 0) {
         	eje.imprimirSolucion();
         }else {
         	System.out.println("GREEDY: -> No hemos llegado a una solución posible.");
