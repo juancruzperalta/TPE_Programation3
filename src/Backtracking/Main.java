@@ -17,7 +17,9 @@ public class Main {
                     if (partes.length == 2) {
                         String nombre = partes[0].trim();
                         int valor = Integer.parseInt(partes[1].trim());
+                        if(valor > 0) {                        	
                         maquinas.add(new Maquina(nombre, valor));
+                        }
                     }
                 }
         }catch(Exception err) {
